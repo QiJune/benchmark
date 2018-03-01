@@ -13,7 +13,7 @@ import paddle.v2 as paddle
 import paddle.fluid as fluid
 import paddle.fluid.core as core
 import paddle.fluid.profiler as profiler
-from visualdl import LogWriter
+# from visualdl import LogWriter
 
 
 def parse_args():
@@ -238,11 +238,11 @@ def run_benchmark(model, args):
     im_num = 0
     total_train_time = 0.0
     total_iters = 0
-    logger = LogWriter(args.log_dir, sync_cycle=10)
-    with logger.mode('loss') as logger:
-        scalar0 = logger.scalar("paddle_resnet_%s%d/scalar" % (args.device, args.batch_size))
-    with logger.mode('accuracy') as logger:
-        scalar1 = logger.scalar("paddle_resnet_%s%d/scalar" % (args.device, args.batch_size))
+    # logger = LogWriter(args.log_dir, sync_cycle=10)
+    # with logger.mode('loss') as logger:
+    #     scalar0 = logger.scalar("paddle_resnet_%s%d/scalar" % (args.device, args.batch_size))
+    # with logger.mode('accuracy') as logger:
+    #     scalar1 = logger.scalar("paddle_resnet_%s%d/scalar" % (args.device, args.batch_size))
 
     for pass_id in range(args.pass_num):
         every_pass_loss = []
