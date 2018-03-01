@@ -269,8 +269,8 @@ def run_benchmark(model, args):
             every_pass_loss.append(loss)
             print("Pass: %d, Iter: %d, loss: %s, acc: %s" %
                   (pass_id, iter, str(loss), str(acc)))
-            scalar0.add_record(total_iters, loss)
-            scalar1.add_record(total_iters, acc)
+            # scalar0.add_record(total_iters, loss)
+            # scalar1.add_record(total_iters, acc)
             iter += 1
             total_iters += 1
 
